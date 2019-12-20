@@ -36,7 +36,7 @@ const sizeStyles = css`
     ${({ size }) => css`
       height: ${sizes[size].height};
       font-size: ${sizes[size].fontSize};
-    `}
+    `};
 `;
 
 const StyledButton = styled.button`
