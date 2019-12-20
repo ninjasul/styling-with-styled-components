@@ -1,26 +1,25 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import styled, {css} from 'styled-components';
+
+const Circle = styled.div`
+  width: 5rem;
+  height: 5rem;
+  background: ${props => props.color};
+  border-radius: 50%;
+  ${props => props.huge &&
+    css`
+    width: 10rem;
+    height: 10rem;
+    `}
+`;
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <>
+            <Circle color="black"/>
+            <Circle color="blue" huge/>
+        </>
+    );
 }
 
 export default App;
